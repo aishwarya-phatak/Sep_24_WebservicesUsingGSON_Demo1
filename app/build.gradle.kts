@@ -36,10 +36,13 @@ android {
 
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 
 dependencies {
+    implementation (libs.picasso)
+    implementation (libs.glide)
     implementation (libs.gson)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

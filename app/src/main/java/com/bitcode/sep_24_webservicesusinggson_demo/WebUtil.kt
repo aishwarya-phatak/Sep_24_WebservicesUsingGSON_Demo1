@@ -8,7 +8,7 @@ import java.net.URL
 
 class WebUtil {
     companion object{
-        fun getAllBooks():APIResponse{
+        fun getAllBooks():ArrayList<Book>{
 
             val url = URL("https://api.itbook.store/1.0/new")
             var httpURLConnection = url.openConnection() as HttpURLConnection
@@ -20,7 +20,7 @@ class WebUtil {
             for(eachBook in books){
                 Log.e("tag", "${eachBook.title} -- ${eachBook.url}")
             }
-            return response
+            return books
         }
     }
 }
